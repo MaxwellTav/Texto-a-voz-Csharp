@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Threading;
@@ -15,8 +8,14 @@ namespace Texto_a_voz_Csharp
 {
     public partial class FormIndex : Form
     {
-        //variables
-        bool seLeHizoClick = false;
+        //variables---------------------------------//
+                                                    //
+            /*Esta variable es la que controla si   //
+            se le da click a la ventana para        //
+            poder moverla con libertad*/            //
+            bool seLeHizoClick = false;             //
+                                                    //
+        //fin de variables--------------------------//
 
         public FormIndex()
         {
@@ -25,35 +24,18 @@ namespace Texto_a_voz_Csharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show("Bienvenido al sistema de texto a voz!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             //inicializando las cosas
-            applicationName.Text = Text;
-            seLeHizoClick = false;
-            volumenSlider.Value = 100;
 
-            //imagenes
-            /*
-            try
-            {
-                exitButton.BackgroundImage = Image.FromFile(@"..\Propierties/Resources/exitIco.png");
-                minimizeButton.BackgroundImage = Image.FromFile(@"..\Resources/minimizeIco.png");
-                if (WindowState == FormWindowState.Maximized)
-                {
-                    maximizeButton.BackgroundImage = Image.FromFile(@"..\Resources/maximizeIco.png");
-                }
-                else
-                {
-                    maximizeButton.BackgroundImage = Image.FromFile(@"..\Resources/normalIco.png");
-                }
-            }
-            catch(Exception err)
-            {
-                MessageBox.Show("Error 0x7092001 al cargar las texturas", "Error no tan grave", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
+            /*esta linea indica que el titulo de el formulario (el texto que esta en el panel de arriba)
+            su texto sera el texto del formulario de inicio, el cual se llama "FormIndex"*/        
+            applicationName.Text = Text;
+
+            seLeHizoClick = false;
+
+            entradaRitchText.Focus();
         }
 
+        //---------------------------OBJETOS---------------------------
         private void exitButton_Click(object sender, EventArgs e)
         {
             //preguntar si desea salir de la aplicacion
@@ -61,25 +43,6 @@ namespace Texto_a_voz_Csharp
             if (DialogResult == DialogResult.Yes)
             {
                 Application.Exit();
-            }
-        }
-
-
-        //Movimiento del form por el panel
-        private void panel3_MouseDown(object sender, MouseEventArgs e)
-        {
-            seLeHizoClick = true;
-        }
-        private void panel3_MouseUp(object sender, MouseEventArgs e)
-        {
-            seLeHizoClick = false;
-        }
-        private void panel3_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (seLeHizoClick)
-            {
-                WindowState = FormWindowState.Normal;
-                Location = Cursor.Position;
             }
         }
 
@@ -99,22 +62,13 @@ namespace Texto_a_voz_Csharp
         {
             WindowState = FormWindowState.Minimized;
         }
-        //fin del movimiento del mouse
-
-
-        public void Hablar(object texto)
-        {
-            SpeechSynthesizer voz = new SpeechSynthesizer();
-            voz.SetOutputToDefaultAudioDevice();
-            voz.Speak(texto.ToString());
-        }
-
+        
         private void playButton_Click(object sender, EventArgs e)
         {
             Thread tarea = new Thread(new ParameterizedThreadStart(Hablar));
             tarea.Start(entradaRitchText.Text);
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Thread _tarea = new Thread(new ParameterizedThreadStart(Hablar));
@@ -128,6 +82,33 @@ namespace Texto_a_voz_Csharp
             Process.Start("https://www.facebook.com/MaxwellRafael.TavaresRocha.7/");
         }
 
+
+        //-----------------------COMPORTAMIENTOS-----------------------
+        //Movimiento del form por el panel
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            seLeHizoClick = true;
+        }
+        private void panel3_MouseUp(object sender, MouseEventArgs e)
+        {
+            seLeHizoClick = false;
+        }
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (seLeHizoClick)
+            {
+                WindowState = FormWindowState.Normal;
+                Location = Cursor.Position;
+            }
+        }
+
+        public void Hablar(object texto)
+        {
+            SpeechSynthesizer voz = new SpeechSynthesizer();
+            voz.SetOutputToDefaultAudioDevice();
+            voz.Speak(texto.ToString());
+        }
+        
         private void volumenSlider_MouseMove(object sender, MouseEventArgs e)
         {
             ToolTip _volumenToolTip = new ToolTip();

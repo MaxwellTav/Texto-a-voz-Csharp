@@ -160,6 +160,7 @@
             this.volumenSlider.BackColor = System.Drawing.Color.Transparent;
             this.volumenSlider.BackgroudColor = System.Drawing.Color.DarkGray;
             this.volumenSlider.BorderRadius = 0;
+            this.volumenSlider.Enabled = false;
             this.volumenSlider.IndicatorColor = System.Drawing.Color.SeaGreen;
             this.volumenSlider.Location = new System.Drawing.Point(155, 39);
             this.volumenSlider.MaximumValue = 100;
