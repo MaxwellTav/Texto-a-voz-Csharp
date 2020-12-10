@@ -118,19 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="errorIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\errorIco1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playButton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exitIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exitIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maximizeIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maximizeIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="normalIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\normalIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizeIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizeIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="normalIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\normalIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maximizeIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximizeIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="errorIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\errorIco1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stopButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stopButton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exitIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exitIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tfgLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tfgLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
